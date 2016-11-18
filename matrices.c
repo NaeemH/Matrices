@@ -7,9 +7,13 @@ Program that will do basic matrix operations; addition and subtraction
 #include <stdio.h>
 #include <stdlib.h>
 
-void checkIfSame(); // and other function declarations
+void checkIfSame(); 
+void addMatrices();
 
 int main() {
+
+	int result[100][100];
+	int resultRow,resultCol,c,d;
 
 	int mat[100][100];
 	int row,column,i,j;
@@ -38,11 +42,10 @@ int main() {
 	printf("\n");
 	}
 
-
 	printf("enter number of rows for second matrix:\n");
-	scanf("%d",&row);
+	scanf("%d",&rowTwo);
 	printf("enter number of columns for second matrix:\n");
-	scanf("%d",&column);
+	scanf("%d",&columnTwo);
 
 	checkIfSame(row, column, rowTwo, columnTwo);
 	printf("enter the matrix entries for second matrix L->R:");
@@ -60,20 +63,27 @@ int main() {
  	   }
 	printf("\n");
 	}
+
+	addMatrices(mat[row][column], matTwo[rowTwo][columnTwo]);
 }
 
 /*Checks if the matrices are the same size*/
-/*Keeps returning errors even when the matrices are the same size, idk why*/
-void checkIfSame(int a, int b, int c, int d){
+void checkIfSame(int x, int y, int w, int z){
 
-	if((a != c){
+	if (x != w || y != z){
 		printf("Error, matrices are not the same size\n");
 		printf("They must have the same row and column in order to add/subtract\n");
 		exit(0);
+	} 
+}
+
+void addMatrices(int swag[100][100], int swagTwo[100][100]){
+
+	int i,j,a,b;
+
+	for(i=0; i<; i++){
+		printf("\n", i);
 	}
-	if (b != d){
-		printf("Error, matrices are not the same size\n");
-		printf("They must have the same row and column in order to add/subtract\n");
-		exit(0);
-	}
+
+	/*printf("\n", swag);*/
 }
