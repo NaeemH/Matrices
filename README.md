@@ -19,3 +19,10 @@ Later functions:
 - To produce REF and RREF
 
 - To produce U and L matrices 
+
+HOW TO RUN:
+
+cd into matrices folder
+gcc matrices.c
+./a.out
+input based on commands
